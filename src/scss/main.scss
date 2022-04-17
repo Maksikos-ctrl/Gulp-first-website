@@ -4,13 +4,9 @@
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+// подключения компонентов страницы (большие компоненты)
 @import "./components/header";
 
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
+//  подключения компонентов страницы (маленькие компоненты)
+@import "./components/nav";
+@import "./components/header-contacts";
