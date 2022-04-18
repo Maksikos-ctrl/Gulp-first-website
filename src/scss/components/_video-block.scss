@@ -1,0 +1,35 @@
+.video-block {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    border-radius: 4px;
+
+    &__content {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Элемент увеличивается или уменьшается, чтобы целиком заполнить заданную область с сохранением пропорций. */
+    }
+
+    &__play {
+        @include flex-all-center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        border-radius: 100%;
+        width: 80px;
+        height: 80px;
+        background-color: var(--color-primary);
+        transform: translate(-50%, -50%);
+
+        svg {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &__mute {
+        
+    }
+}

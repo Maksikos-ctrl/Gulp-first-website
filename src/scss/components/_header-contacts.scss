@@ -3,11 +3,15 @@
 
     &__link {
         @include flex-column-start;
+        
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
     }
 }
 
 .contacts-link {
-    padding: 60px;
+    padding-left: 53px;
     background-position: left center;
     background-size: 40px 40px;
     background-repeat: no-repeat;
@@ -21,7 +25,7 @@
     &__nesting {
         font-size: 18px;
         line-height: 150%;
-        color: #1e212c;
+        color: var(--color-ebony);
     }
 
     &--call {
