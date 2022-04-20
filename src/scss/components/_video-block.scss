@@ -4,6 +4,18 @@
     height: 500px;
     border-radius: 4px;
 
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0; /* Просто ростягиваем это на всю ширину */
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+        background: rgba(#1e212c, 0.6);
+
+    }
+
     &__content {
         display: block;
         width: 100%;
@@ -24,12 +36,26 @@
         transform: translate(-50%, -50%);
 
         svg {
+            color: #fff;
             width: 26px;
             height: 26px;
         }
     }
 
-    &__mute {
-        
-    }
+    &__muted {
+        @include flex-all-center;
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+        z-index: 10;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(#fff, 0.12);
+      
+        svg {
+            width: 20px;
+            height: 20px;
+        } 
+    } 
 }
