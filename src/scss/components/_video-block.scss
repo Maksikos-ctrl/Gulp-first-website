@@ -36,7 +36,7 @@
         transform: translate(-50%, -50%);
 
         svg {
-            color: #fff;
+            fill: var(--color-light);
             width: 26px;
             height: 26px;
         }
@@ -54,6 +54,7 @@
         background-color: rgba(#fff, 0.12);
       
         svg {
+            fill: var(--color-light);
             width: 20px;
             height: 20px;
         } 
