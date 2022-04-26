@@ -10,14 +10,6 @@
         @include flex-all-center;
     }
 
-    &__subtitle {
-        margin: 0;
-        margin-right: 40px;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 150%;
-        color: var(--color-ebony);
-    }
 
     &__list {
         margin-bottom: 80px;
@@ -79,7 +71,7 @@
         z-index: 10;
 
     }
-    
+
     &__icon {
         margin-bottom: 24px;
         width: 52px;
@@ -98,7 +90,7 @@
         color: var(--color-ebony);
         transition: color .3s ease-in-out;
     }
-    
+
     &--construct {
         &::before {
             background-image: url("../img/image.jpg");

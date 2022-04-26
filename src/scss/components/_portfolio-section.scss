@@ -17,14 +17,36 @@
     &__title {
         max-width: 710px;
         margin: 0;
-        padding-bottom: 12px;
+        padding-bottom: 50px;
+    }
+
+    &__learn {
+        margin-top: 84px;
     }
 
     &__items {
         padding: 100px;
         margin: -100px;
+
+
+        .swiper-slide {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .slider-visible {
+          opacity: 1;
+          visibility: visible;
+        }
     }
 }
+
+.slide {
+    margin-right: 14px;
+}
+
+
 
 
 .portfolio-item {
@@ -39,17 +61,19 @@
     &__content {
         @include flex-column-center;
 
-        padding: 18px 10px;
+        padding: 0 10px;
+        padding-top: 16px;
+        padding-bottom: 23px;
     }
 
     &__title {
         // margin-right: 900px;
         margin-bottom: 5px;
-        // margin: 0;
+        margin: 0;
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
-        text-align: center;
+        // text-align: center;
         color: var(--color-ebony);
     }
 
@@ -57,7 +81,7 @@
         display: inline-block;
         // margin-bottom: 24px;
         // margin-right: 900px;
-        margin-top: 4px;
+        // margin-top: 4px;
         font-size: 14px;
         line-height: 150%;
         color: var(--color-storm);
@@ -76,8 +100,8 @@
         color: var(--color-primary);
     }
 
-    &__image {
-        height: 345px;
-        width: 390px;
-    }
+    // &__image {
+    //     height: 345px;
+    //     width: 390px;
+    // }
 }
