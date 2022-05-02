@@ -4,6 +4,8 @@
 @import "fonts";
 @import "settings";
 
+// компоненты страницы
+@import "./components/slider-nav";
 
 // подключения компонентов страницы (большие компоненты)
 @import "./components/header";
@@ -14,11 +16,12 @@
 @import "./components/portfolio-section";
 @import "./components/partners";
 @import "./components/testimonials";
+@import "./components/facts-figures";
 
 //  подключения компонентов страницы (маленькие компоненты)
 @import "./components/nav";
 @import "./components/header-contacts";
 @import "./components/video-block";
 @import "./components/form-field";
-@import "./components/slider-nav";
+// @import "./components/slider-nav";
 @import "./components/learn-more";
