@@ -66,6 +66,9 @@
 //   },
 // });
 
+// ? Пофиксить Слайдер, сделать его draggable
+// ? И 1 и 2
+
 
 // Slider 1, Homepage
 let pos = 0;
@@ -145,51 +148,5 @@ checkBtns();
 
 
 
-
-
-// next.addEventListener('click', () => {
-//   console.log('Я живой');
-// });
-
-// prev.addEventListener('click', () => {
-//   console.log('Я влево');
-// });
-
-// let indexOfSlides = 1;
-
-
-// showSlides(indexOfSlides);
-
-
-// function showSlides(s) {
-//     if (s > slide.length) {
-//         indexOfSlides = 1;
-//     }
-
-//     if (s < 1) {
-//         indexOfSlides = slide.length;
-//     }
-
-//     slide.forEach(s => {
-//         s.style.display = 'none';
-//     });
-
-//     // slide[indexOfSlides - 1].style.display = '';
-// }
-
-
-// function incrementSlides(s) {
-//     showSlides(indexOfSlides += s);
-// }
-
-// prev.addEventListener('click', () => {
-//   incrementSlides(-1);
-// });
-
-// next.addEventListener('click', () => {
-//   incrementSlides(1);
-// });
-
-// console.log("pidor");
 
 

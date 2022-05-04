@@ -17,19 +17,38 @@
         height: 44px;
         font-size: 14px;
         line-height: 150%;
-   
+
         &::placeholder {
-            color: #9a9ac5;
+          color: #9a9ac5;
+        }
+
+        &:focus {
+          outline: 2px solid var(--color-primary);
+          outline-offset: 2px;
+        }
+
+        &--large{
+          height: 66px;
+          resize: none;
+          padding-top: 10px;
         }
 
     }
 
-    &--large {
+    &--large{
         flex-grow: 1; // |item1|--|item2|--|item3|
 
         .form-field__input {
-            width: 100%;
+          width: 100%;
         }
-        
+
+    }
+
+    &--gray {
+      width: 100%;
+
+      .form-field__input {
+        width: 100%;
+        background-color: #f4f5f7;       }
     }
 }
