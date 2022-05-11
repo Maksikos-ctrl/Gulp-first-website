@@ -46,6 +46,12 @@
     margin-right: 14px;
 }
 
+.swiper-wrapper {
+  &.active {
+		cursor: grab;
+	}
+}
+
 
 
 

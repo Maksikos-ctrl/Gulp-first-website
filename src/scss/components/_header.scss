@@ -11,4 +11,18 @@
     &--main {
         background-color: var(--color-light);
     }
+
+    &--secondary {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+}
+
+.nav {
+  &__link:hover, &__link.active {
+    border-bottom: 2px var(--color-primary) solid;
+    color: var(--color-primary);
+  }
 }
