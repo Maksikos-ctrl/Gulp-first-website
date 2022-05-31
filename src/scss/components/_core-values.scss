@@ -2,7 +2,7 @@
     background-color: var(--color-light);
 
     &__list {
-        --core-value-gap: 94px; 
+       --core-value-gap: 94px;
         display: grid;
         grid-template-columns: repeat(3, 1fr); // Тут я делю блок на 3 части равние 33.33%
         margin-bottom: 27px;
@@ -17,7 +17,7 @@
         background-size: 48px 48px;
         background-repeat: no-repeat;
 
-        &:not(:last-child) { // У каждого последнего элемента мы делаем 
+        &:not(:last-child) { // У каждого последнего элемента мы делаем
             &::after {
                 content: "";
                 position: absolute;
@@ -31,18 +31,18 @@
                 background-repeat: no-repeat;
             }
         }
-        
+
         &--quality {
             background-image: url("../img/svg/quality.svg");
-           
+
         }
 
-        
+
         &--safety {
             background-image: url("../img/svg/safety.svg");
         }
 
-        
+
         &--comfort {
             background-image: url("../img/svg/comfort.svg");
         }
@@ -69,9 +69,9 @@
 
 .know-form {
     position: relative;
-    top: 92px; 
+    top: 92px;
     border-radius: 4px;
-    padding: 48px 60px; 
+    padding: 48px 60px;
     box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03);
     background-color: var(--color-light);
 

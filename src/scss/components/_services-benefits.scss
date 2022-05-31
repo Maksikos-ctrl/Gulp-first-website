@@ -1,0 +1,84 @@
+.services-benefits {
+  padding-top: 80px;
+  background-color: var(--color-ebony);
+
+  &__title {
+    color: var(--color-light);
+
+  }
+
+  &__btn {
+    transform: translateY(13px);
+    width: 390px;
+  }
+
+  &__centered {
+    margin-bottom: -13px;
+  }
+
+  &__list {
+     --core-value-gap: 94px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // Тут я делю блок на 3 части равние 33.33%
+      margin-bottom: 27px;
+      gap: calc(var(--core-value-gap) * 2); // Пробел между блоками, free space
+  }
+
+  &__item {
+      position: relative;
+      padding-top: 71px;
+      text-align: center;
+      background-position: top center;
+      background-size: 48px 48px;
+      background-repeat: no-repeat;
+
+      &:not(:last-child) { // У каждого последнего элемента мы делаем
+          &::after {
+              content: "";
+              position: absolute;
+              right: calc(-1 * var(--core-value-gap));
+              top: 0;
+              width: 1px;
+              height: 100%;
+              background-image: url("../img/svg/divider.svg");
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+          }
+      }
+
+      &--terms{
+          background-image: url("../img/svg/ic-contract.svg");
+
+      }
+
+
+      &--workers{
+          background-image: url("../img/svg/ic-helmet.svg");
+      }
+
+
+      &--control {
+          background-image: url("../img/svg/ic-camera.svg");
+      }
+  }
+
+  &__subtitle {
+      margin: 0;
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-light);
+  }
+
+  &__description {
+      margin: 0;
+      margin-bottom: 60px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 160%;
+      color: var(--color-storm);
+  }
+}
+

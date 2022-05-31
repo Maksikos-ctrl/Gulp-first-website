@@ -17,9 +17,13 @@
 }
 
 .services-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); // |item1|-|item2|-|item3|-|item4|
-    gap: var(--grid-gap);
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr); // |item1|-|item2|-|item3|-|item4|
+  gap: var(--grid-gap);
+
+  &__item {
+    grid-column: 3 span;
+  }
 }
 
 .services-item {

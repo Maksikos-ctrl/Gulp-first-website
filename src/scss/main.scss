@@ -24,6 +24,11 @@
 @import "./components/page-hero";
 @import "./components/services-content";
 @import "./components/we-offer";
+@import "./components/how-we-do-it";
+@import "./components/services-benefits";
+@import "./components/related-projects";
+@import "./components/pricing-section";
+
 
 
 //  подключения компонентов страницы (маленькие компоненты)
@@ -34,3 +39,4 @@
 @import "./components/breadcrumbs";
 @import "./components/learn-more";
 @import "./components/social";
+@import "./components/portfolio-item";

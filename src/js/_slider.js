@@ -4,7 +4,7 @@
 //! Window coordinates are great to use with position:fixed, and document coordinates do well with position:absolute.
 
 
-// ? Пофиксить Слайдер, сделать его draggable
+// ? Пофиксить Слайдер, сделать его draggable, позже нужно переписать на классы
 // ? И 1 и 2
 
 
@@ -251,6 +251,10 @@ checkBtns();
 
 //   canISlide = true;
 // }
+
+
+
+// Slider 2, Service-1
 
 
 

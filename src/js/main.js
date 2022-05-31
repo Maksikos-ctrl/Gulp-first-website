@@ -1,10 +1,7 @@
-import './_accordion';
-import './_progress';
-import './_slider';
-import './_vendor';
-import vars from './_vars';
-// import './_functions';
-import './_components';
+import './vendor.js';
+import './_slider.js';
+import './components/progress.js';
+
 
 
 
