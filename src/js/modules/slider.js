@@ -9,73 +9,75 @@
 
 
 // Slider 1, Homepage
-const slidesToShow = 5,
-     slidesToScroll = 10,
-     container = document.querySelector('.portfolio-section__items'),
-     wrapper = document.querySelector('.swiper-wrapper'), //!
-     slides = document.querySelectorAll('.slide'),
-     prev = document.querySelector('.portfolio-section__prev'),
-     next = document.querySelector('.portfolio-section__next'),
-     slidesCount = slides.length,
-     slidesWidth = container.clientWidth / slidesToShow,
-     moveToAnotherSlide =  slidesToScroll *  slidesWidth;
 
-let pressed = false,
-    pos = 0,
-    startX,
-    x;
+function slider({containerSelector, wrapperSelector, slideSelector, prevArrow, nextArrow}) {
+ const slidesToShow = 5,
+    slidesToScroll = 10,
+    container = document.querySelector(containerSelector),
+    wrapper = document.querySelector( wrapperSelector), //!
+    slides = document.querySelectorAll(slideSelector),
+    prev = document.querySelector(prevArrow),
+    next = document.querySelector(nextArrow),
+    slidesCount = slides.length,
+    slidesWidth = container.clientWidth / slidesToShow,
+    moveToAnotherSlide =  slidesToScroll *  slidesWidth;
 
-container.addEventListener('mousedown', e => {
-  pressed = true;
-  startX = e.offsetX;
-  container.style.cursor = 'grabbing';
-});
+  let pressed = false,
+  pos = 0,
+  startX,
+  x;
 
-container.addEventListener('mouseenter', e => {
-  container.style.cursor = 'grab';
-});
+  container.addEventListener('mousedown', e => {
+    pressed = true;
+    startX = e.offsetX;
+    container.style.cursor = 'grabbing';
+  });
 
-// container.addEventListener('mouseleave', e => {
-//   container.style.cursor = 'default';
-// });
+  container.addEventListener('mouseenter', e => {
 
-container.addEventListener('mouseup', () => {
-  container.style.cursor = 'grab';
-});
+  });
 
-window.addEventListener('mouseup', () => {
-  pressed = false;
-});
+  // container.addEventListener('mouseleave', e => {
+  //   container.style.cursor = 'default';
+  // });
 
-container.addEventListener('mouseup', e => {
-  if (!pressed) return;
-  e.preventDefault();
+  container.addEventListener('mouseup', () => {
+    container.style.cursor = 'grab';
+  });
 
-  x = e.offsetX;
+  window.addEventListener('mouseup', () => {
+    pressed = false;
+  });
 
-  wrapper.style.left = `${x - startX}px`;
+  container.addEventListener('mouseup', e => {
+    if (!pressed) return;
+    e.preventDefault();
 
-  checkBoundaryEdge();
-});
+    x = e.offsetX;
 
-function checkBoundaryEdge() {
-  let outer = container.getBoundingClientRect(),
+    wrapper.style.left = `${x - startX}px`;
+
+    checkBoundaryEdge();
+  });
+
+  function checkBoundaryEdge() {
+    let outer = container.getBoundingClientRect(),
     inner = wrapper.getBoundingClientRect();
 
-  if (parseInt(wrapper.style.left) > 0) {
-    wrapper.style.left = '0px';
-  } else if (inner.right < outer.right) {
-    wrapper.style.left = `-${inner.width - outer.width}`;
+    if (parseInt(wrapper.style.left) > 0) {
+      wrapper.style.left = '0px';
+    } else if (inner.right < outer.right) {
+      wrapper.style.left = `-${inner.width - outer.width}`;
+    }
   }
-}
 
 
 
-slides.forEach(s => {
+  slides.forEach(s => {
     s.style.minWidth = `${slidesWidth}px`;
-});
+  });
 
-next.addEventListener('click', () => {
+  next.addEventListener('click', () => {
     const slidesLeft = slidesCount - (Math.abs(pos) + slidesToShow *  slidesWidth) / slidesWidth;
 
     pos -= slidesLeft >= slidesToScroll ?  moveToAnotherSlide : slidesLeft *  slidesWidth;
@@ -83,29 +85,33 @@ next.addEventListener('click', () => {
 
     setPosition();
     checkBtns();
-});
+  });
 
-prev.addEventListener('click', () => {
-  const slidesLeft = Math.abs(pos) / slidesWidth;
+  prev.addEventListener('click', () => {
+    const slidesLeft = Math.abs(pos) / slidesWidth;
 
-  pos += slidesLeft >= slidesToScroll ?  moveToAnotherSlide : slidesLeft *  slidesWidth;
+    pos += slidesLeft >= slidesToScroll ?  moveToAnotherSlide : slidesLeft *  slidesWidth;
 
-  setPosition();
-  checkBtns();
-});
+    setPosition();
+    checkBtns();
+  });
 
-const setPosition = () => {
+  const setPosition = () => {
     wrapper.style.transform = `translateX(${pos}px)`;
-};
+  };
 
-const checkBtns = () => {
+  const checkBtns = () => {
     prev.disabled = pos === 0;
     next.disabled = pos <= -(slidesCount - slidesToShow) * slidesWidth;
-};
+  };
 
 
 
-checkBtns();
+  checkBtns();
+
+}
+
+export default slider;
 
 
 // Slider 2, Homepage  //? Возможно его и не будет

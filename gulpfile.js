@@ -143,7 +143,8 @@ const scripts = () => {
     .pipe(webpackStream({
       mode: isProd ? 'production' : 'development',
       output: {
-        filename: 'main.js',
+        filename: 'app.js',
+        path: __dirname + '/js'
       },
       module: {
         rules: [{
@@ -183,7 +184,8 @@ const scriptsBackend = () => {
     .pipe(webpackStream({
       mode: 'development',
       output: {
-        filename: 'main.js',
+        filename: 'app.js',
+        path: __dirname + '/js'
       },
       module: {
         rules: [{
