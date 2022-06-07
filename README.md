@@ -1,4 +1,4 @@
-# Gulp - сборка Maksikos-ctrl
+# Gulp - сборка Maksikos-ctrl и MaxGraph
 
 > Используется Gulp 4
 
